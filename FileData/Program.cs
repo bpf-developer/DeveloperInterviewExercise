@@ -23,7 +23,8 @@ namespace FileData
            
          }
             string result;
-            if(a=="-v")
+            int size;
+            if(a=="-v" || "--v" || "//v" || ""--version)
             {
                 FileDetails f= new FileDetails();
                 result= f.Version(b);
@@ -31,6 +32,13 @@ namespace FileData
                 Console.ReadLine(result);
                 
             }
+             if(a=="-s" || "--s" || "//s" || ""--size)
+            {
+                 FileDetails f= new FileDetails();
+                size= f.size(b);
+                
+                Console.ReadLine(size);
+             }
         }
     }
 }
